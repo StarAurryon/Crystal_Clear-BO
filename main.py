@@ -21,7 +21,7 @@ def download():
     in_files = [(stat[st.ST_MTIME], path)
            for stat, path in in_files if st.S_ISREG(stat[st.ST_MODE])]
     in_files = sorted(in_files)
-    out_files = [f for f in os.listdir(out_path) if isfile(join(mypath, f))]
+    out_files = [f for f in os.listdir(out_path) if os.path.isfile(os.path.join(out_path, f))]
     in_files = [f[1] for f in in_files if f[1] not in out_files]
     if in_files:
         result = send_from_directory(in_path, in_files[0], as_attachment=True)
