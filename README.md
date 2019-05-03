@@ -1,6 +1,6 @@
-#Crystal Clear BO
+# Crystal Clear BO
 This is the back office for the crystal clear software by StatisticDean
 
-#Requirement
+# Requirement
 Python flask
 A data directory
