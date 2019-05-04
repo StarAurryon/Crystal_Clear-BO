@@ -24,9 +24,7 @@ def download():
     out_files = [f for f in os.listdir(out_path) if os.path.isfile(os.path.join(out_path, f))]
     in_files = [f[1] for f in in_files if f[1] not in out_files]
     if in_files:
-        result = send_from_directory(in_path, in_files[0], as_attachment=True)
-        result
-        return result
+        return = send_from_directory(in_path, in_files[0], as_attachment=True)
     return ""
 
 @app.route("/", methods=["POST"])
